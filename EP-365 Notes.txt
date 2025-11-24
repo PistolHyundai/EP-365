@@ -17,7 +17,9 @@ Imagine that you were making a number like 123 and you have the numbers  1 2 4 
 Conversion Back to Analog:
 
 However, as I mentioned, the conversion process is not perfect. One of the primary concerns is aliasing, which occurs when the sampling rate is too low to accurately capture the signal's frequency content. Aliasing results in distortion, as higher frequencies are incorrectly represented as lower frequencies. The relationship of the alias to the original pitch is sample rate - (original pitch - Nyquist frequency). So, for example in 44.1k system a 22,200 hz waveform would instead be rendered as an alias at 22,000 hz. To prevent aliasing, an anti-aliasing filter is applied to the analog signal before sampling, removing frequencies above half the sampling rate.
+
 Another challenge is managing quantization noise, which is inherent in the quantization process. While increasing the bit depth can reduce quantization noise, it also increases the amount of data that must be stored and processed. Techniques such as dithering, which adds a small amount of noise to the signal before quantization, can help minimize the perceptual impact of quantization noise. The reason for this is that, generally speaking the limits of analog information are noise (hold a magnifying glass to a printed image or listen to a cassette tape with no sound recorded to it, to get a sense of what I mean), and the limits of digital information is clipping distortion at the peak and quantization distortion at the bottom. You can perform your own dither with a test oscillator in your DAW of choice. Put a Bit Crusher on the master track and set the bit depth to a low value such that the distortion is audible. Then add another track with white noise. Slowly bring up the volume of the noise and you will hear the distortion disappear. It's a fun party trick and gives you an aural demonstration of what dither sounds like.
+
 ————
 Filters:
  
