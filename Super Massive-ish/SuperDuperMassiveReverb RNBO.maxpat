@@ -13,6 +13,30 @@
         "boxes": [
             {
                 "box": {
+                    "attr": "warp",
+                    "id": "obj-6",
+                    "maxclass": "attrui",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 944.0, 353.0, 150.0, 22.0 ]
+                }
+            },
+            {
+                "box": {
+                    "attr": "brightness",
+                    "id": "obj-2",
+                    "maxclass": "attrui",
+                    "numinlets": 1,
+                    "numoutlets": 1,
+                    "outlettype": [ "" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 870.0, 495.0, 150.0, 22.0 ]
+                }
+            },
+            {
+                "box": {
                     "autosave": 1,
                     "id": "obj-8",
                     "inletInfo": {
@@ -61,10 +85,863 @@
                             "modernui": 1
                         },
                         "classnamespace": "rnbo",
-                        "rect": [ 59.0, 119.0, 1000.0, 780.0 ],
+                        "rect": [ 59.0, 119.0, 785.0, 780.0 ],
                         "default_fontname": "Lato",
                         "title": "untitled",
                         "boxes": [
+                            {
+                                "box": {
+                                    "id": "obj-9",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 2,
+                                    "outlettype": [ "", "" ],
+                                    "patching_rect": [ 1396.0, 175.0, 210.0, 23.0 ],
+                                    "rnbo_classname": "param",
+                                    "rnbo_extra_attributes": {
+                                        "enum": "",
+                                        "order": "0",
+                                        "displayname": "",
+                                        "ctlin": -1.0,
+                                        "sendinit": 1,
+                                        "steps": 0.0,
+                                        "fromnormalized": "",
+                                        "meta": "",
+                                        "displayorder": "-",
+                                        "preset": 1,
+                                        "exponent": 1.0,
+                                        "tonormalized": "",
+                                        "unit": ""
+                                    },
+                                    "rnbo_serial": 5,
+                                    "rnbo_uniqueid": "warp",
+                                    "rnboinfo": {
+                                        "needsInstanceInfo": 1,
+                                        "argnames": {
+                                            "value": {
+                                                "attrOrProp": 1,
+                                                "digest": "Parameter value",
+                                                "defaultarg": 2,
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 1,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "inlet": 1,
+                                                "type": "number",
+                                                "defaultValue": "0"
+                                            },
+                                            "normalizedvalue": {
+                                                "attrOrProp": 1,
+                                                "digest": "Set value normalized. ",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "inlet": 1,
+                                                "type": "number"
+                                            },
+                                            "reset": {
+                                                "attrOrProp": 1,
+                                                "digest": "Reset param to initial value",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "attachable": 1,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "bang"
+                                            },
+                                            "normalized": {
+                                                "attrOrProp": 1,
+                                                "digest": "Normalized parameter value.",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "outlet": 1,
+                                                "type": "number"
+                                            },
+                                            "name": {
+                                                "attrOrProp": 2,
+                                                "digest": "Name of the parameter",
+                                                "defaultarg": 1,
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "symbol",
+                                                "label": "Parameter Name",
+                                                "mandatory": 1
+                                            },
+                                            "enum": {
+                                                "attrOrProp": 2,
+                                                "digest": "Use an enumerated output",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "list",
+                                                "label": "Enum Values",
+                                                "displayorder": 6
+                                            },
+                                            "minimum": {
+                                                "attrOrProp": 2,
+                                                "digest": "Minimum value",
+                                                "isalias": 0,
+                                                "aliases": [ "min" ],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "number",
+                                                "defaultValue": "0",
+                                                "label": "Minimum",
+                                                "displayorder": 1
+                                            },
+                                            "min": {
+                                                "attrOrProp": 2,
+                                                "digest": "Minimum value",
+                                                "isalias": 1,
+                                                "aliasOf": "minimum",
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "number",
+                                                "defaultValue": "0",
+                                                "label": "Minimum",
+                                                "displayorder": 1
+                                            },
+                                            "maximum": {
+                                                "attrOrProp": 2,
+                                                "digest": "Maximum value",
+                                                "isalias": 0,
+                                                "aliases": [ "max" ],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "number",
+                                                "defaultValue": "1",
+                                                "label": "Maximum",
+                                                "displayorder": 2
+                                            },
+                                            "max": {
+                                                "attrOrProp": 2,
+                                                "digest": "Maximum value",
+                                                "isalias": 1,
+                                                "aliasOf": "maximum",
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "number",
+                                                "defaultValue": "1",
+                                                "label": "Maximum",
+                                                "displayorder": 2
+                                            },
+                                            "exponent": {
+                                                "attrOrProp": 2,
+                                                "digest": "Scale values exponentially",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "number",
+                                                "defaultValue": "1",
+                                                "label": "Exponent",
+                                                "displayorder": 7
+                                            },
+                                            "steps": {
+                                                "attrOrProp": 2,
+                                                "digest": "Divide the output into a number of discrete steps",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "number",
+                                                "defaultValue": "0",
+                                                "label": "Steps",
+                                                "displayorder": 8
+                                            },
+                                            "displayName": {
+                                                "attrOrProp": 2,
+                                                "digest": "DEPRECATED: Use the lower case 'displayname' instead",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 1,
+                                                "touched": 0,
+                                                "type": "symbol",
+                                                "label": "Display Name"
+                                            },
+                                            "displayname": {
+                                                "attrOrProp": 2,
+                                                "digest": "A more readable name for the parameter in an external RNBO target",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "symbol",
+                                                "defaultValue": "",
+                                                "label": "Display Name",
+                                                "displayorder": 14
+                                            },
+                                            "unit": {
+                                                "attrOrProp": 2,
+                                                "digest": "A symbol to describe the unit of the parameter in an external RNBO target",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "symbol",
+                                                "defaultValue": "",
+                                                "label": "Unit",
+                                                "displayorder": 15
+                                            },
+                                            "tonormalized": {
+                                                "attrOrProp": 2,
+                                                "digest": "Converts a real parameter value to its normalized form",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "symbol",
+                                                "label": "To Normalized Expression",
+                                                "displayorder": 10
+                                            },
+                                            "fromnormalized": {
+                                                "attrOrProp": 2,
+                                                "digest": "Converts a normalized parameter into its actual parameter value",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "symbol",
+                                                "label": "From Normalized Expression",
+                                                "displayorder": 9
+                                            },
+                                            "order": {
+                                                "attrOrProp": 2,
+                                                "digest": "Order in which initial parameter values will be sent out on patcher load. The order can be numeric or symbolic ('first' and 'last')",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "symbol",
+                                                "defaultValue": "0",
+                                                "label": "Restore Order",
+                                                "displayorder": 12
+                                            },
+                                            "displayorder": {
+                                                "attrOrProp": 2,
+                                                "digest": "Order in which parameters will show up in a list of all parameters. The order can be numeric or symbolic ('first' and 'last')",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "symbol",
+                                                "defaultValue": "-",
+                                                "label": "Display Order",
+                                                "displayorder": 13
+                                            },
+                                            "sendinit": {
+                                                "attrOrProp": 2,
+                                                "digest": "Send initial value",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "bool",
+                                                "defaultValue": "true",
+                                                "label": "Send Init",
+                                                "displayorder": 4
+                                            },
+                                            "ctlin": {
+                                                "attrOrProp": 2,
+                                                "digest": "MIDI controller number to control this parameter.",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "number",
+                                                "defaultValue": "-1",
+                                                "label": "MIDI Controller Number.",
+                                                "displayorder": 16
+                                            },
+                                            "meta": {
+                                                "attrOrProp": 2,
+                                                "digest": "A JSON formatted string containing metadata for use by the exported code",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "symbol",
+                                                "defaultValue": "",
+                                                "label": "Metadata",
+                                                "displayorder": 17
+                                            },
+                                            "nopreset": {
+                                                "attrOrProp": 2,
+                                                "digest": "Do not add this value to the preset [DEPRECATED - USE @preset 0 instead].",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 1,
+                                                "touched": 0,
+                                                "type": "bool",
+                                                "defaultValue": "false"
+                                            },
+                                            "preset": {
+                                                "attrOrProp": 2,
+                                                "digest": "Add this value to the preset.",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "bool",
+                                                "defaultValue": "true",
+                                                "label": "Include In Preset",
+                                                "displayorder": 11
+                                            }
+                                        },
+                                        "inputs": [
+                                            {
+                                                "name": "value",
+                                                "type": "number",
+                                                "digest": "Parameter value",
+                                                "defaultarg": 2,
+                                                "hot": 1,
+                                                "docked": 0
+                                            },
+                                            {
+                                                "name": "normalizedvalue",
+                                                "type": "number",
+                                                "digest": "Set value normalized. ",
+                                                "docked": 0
+                                            }
+                                        ],
+                                        "outputs": [
+                                            {
+                                                "name": "value",
+                                                "type": "number",
+                                                "digest": "Parameter value",
+                                                "defaultarg": 2,
+                                                "hot": 1,
+                                                "docked": 0
+                                            },
+                                            {
+                                                "name": "normalized",
+                                                "type": "number",
+                                                "digest": "Normalized parameter value.",
+                                                "docked": 0
+                                            }
+                                        ],
+                                        "helpname": "param",
+                                        "aliasOf": "param",
+                                        "classname": "param",
+                                        "operator": 0,
+                                        "versionId": -1661410411,
+                                        "changesPatcherIO": 0
+                                    },
+                                    "text": "param warp @min 1. @max 100",
+                                    "varname": "warp"
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-8",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 1,
+                                    "outlettype": [ "" ],
+                                    "patching_rect": [ 1070.0, 279.0, 43.0, 23.0 ],
+                                    "rnbo_classname": "!-",
+                                    "rnbo_extra_attributes": {
+                                        "hot": 0
+                                    },
+                                    "rnbo_serial": 1,
+                                    "rnbo_uniqueid": "!-_obj-8",
+                                    "text": "!- 100."
+                                }
+                            },
+                            {
+                                "box": {
+                                    "id": "obj-1",
+                                    "maxclass": "newobj",
+                                    "numinlets": 2,
+                                    "numoutlets": 2,
+                                    "outlettype": [ "", "" ],
+                                    "patching_rect": [ 1156.0, 175.0, 206.0, 23.0 ],
+                                    "rnbo_classname": "param",
+                                    "rnbo_extra_attributes": {
+                                        "enum": "",
+                                        "order": "0",
+                                        "displayname": "",
+                                        "ctlin": -1.0,
+                                        "sendinit": 1,
+                                        "steps": 0.0,
+                                        "fromnormalized": "",
+                                        "meta": "",
+                                        "displayorder": "-",
+                                        "preset": 1,
+                                        "exponent": 1.0,
+                                        "tonormalized": "",
+                                        "unit": ""
+                                    },
+                                    "rnbo_serial": 1,
+                                    "rnbo_uniqueid": "brightness",
+                                    "rnboinfo": {
+                                        "needsInstanceInfo": 1,
+                                        "argnames": {
+                                            "value": {
+                                                "attrOrProp": 1,
+                                                "digest": "Parameter value",
+                                                "defaultarg": 2,
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 1,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "inlet": 1,
+                                                "type": "number",
+                                                "defaultValue": "0"
+                                            },
+                                            "normalizedvalue": {
+                                                "attrOrProp": 1,
+                                                "digest": "Set value normalized. ",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "inlet": 1,
+                                                "type": "number"
+                                            },
+                                            "reset": {
+                                                "attrOrProp": 1,
+                                                "digest": "Reset param to initial value",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "attachable": 1,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "bang"
+                                            },
+                                            "normalized": {
+                                                "attrOrProp": 1,
+                                                "digest": "Normalized parameter value.",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "outlet": 1,
+                                                "type": "number"
+                                            },
+                                            "name": {
+                                                "attrOrProp": 2,
+                                                "digest": "Name of the parameter",
+                                                "defaultarg": 1,
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "symbol",
+                                                "label": "Parameter Name",
+                                                "mandatory": 1
+                                            },
+                                            "enum": {
+                                                "attrOrProp": 2,
+                                                "digest": "Use an enumerated output",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "list",
+                                                "label": "Enum Values",
+                                                "displayorder": 6
+                                            },
+                                            "minimum": {
+                                                "attrOrProp": 2,
+                                                "digest": "Minimum value",
+                                                "isalias": 0,
+                                                "aliases": [ "min" ],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "number",
+                                                "defaultValue": "0",
+                                                "label": "Minimum",
+                                                "displayorder": 1
+                                            },
+                                            "min": {
+                                                "attrOrProp": 2,
+                                                "digest": "Minimum value",
+                                                "isalias": 1,
+                                                "aliasOf": "minimum",
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "number",
+                                                "defaultValue": "0",
+                                                "label": "Minimum",
+                                                "displayorder": 1
+                                            },
+                                            "maximum": {
+                                                "attrOrProp": 2,
+                                                "digest": "Maximum value",
+                                                "isalias": 0,
+                                                "aliases": [ "max" ],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "number",
+                                                "defaultValue": "1",
+                                                "label": "Maximum",
+                                                "displayorder": 2
+                                            },
+                                            "max": {
+                                                "attrOrProp": 2,
+                                                "digest": "Maximum value",
+                                                "isalias": 1,
+                                                "aliasOf": "maximum",
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "number",
+                                                "defaultValue": "1",
+                                                "label": "Maximum",
+                                                "displayorder": 2
+                                            },
+                                            "exponent": {
+                                                "attrOrProp": 2,
+                                                "digest": "Scale values exponentially",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "number",
+                                                "defaultValue": "1",
+                                                "label": "Exponent",
+                                                "displayorder": 7
+                                            },
+                                            "steps": {
+                                                "attrOrProp": 2,
+                                                "digest": "Divide the output into a number of discrete steps",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "number",
+                                                "defaultValue": "0",
+                                                "label": "Steps",
+                                                "displayorder": 8
+                                            },
+                                            "displayName": {
+                                                "attrOrProp": 2,
+                                                "digest": "DEPRECATED: Use the lower case 'displayname' instead",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 1,
+                                                "touched": 0,
+                                                "type": "symbol",
+                                                "label": "Display Name"
+                                            },
+                                            "displayname": {
+                                                "attrOrProp": 2,
+                                                "digest": "A more readable name for the parameter in an external RNBO target",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "symbol",
+                                                "defaultValue": "",
+                                                "label": "Display Name",
+                                                "displayorder": 14
+                                            },
+                                            "unit": {
+                                                "attrOrProp": 2,
+                                                "digest": "A symbol to describe the unit of the parameter in an external RNBO target",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "symbol",
+                                                "defaultValue": "",
+                                                "label": "Unit",
+                                                "displayorder": 15
+                                            },
+                                            "tonormalized": {
+                                                "attrOrProp": 2,
+                                                "digest": "Converts a real parameter value to its normalized form",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "symbol",
+                                                "label": "To Normalized Expression",
+                                                "displayorder": 10
+                                            },
+                                            "fromnormalized": {
+                                                "attrOrProp": 2,
+                                                "digest": "Converts a normalized parameter into its actual parameter value",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "symbol",
+                                                "label": "From Normalized Expression",
+                                                "displayorder": 9
+                                            },
+                                            "order": {
+                                                "attrOrProp": 2,
+                                                "digest": "Order in which initial parameter values will be sent out on patcher load. The order can be numeric or symbolic ('first' and 'last')",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "symbol",
+                                                "defaultValue": "0",
+                                                "label": "Restore Order",
+                                                "displayorder": 12
+                                            },
+                                            "displayorder": {
+                                                "attrOrProp": 2,
+                                                "digest": "Order in which parameters will show up in a list of all parameters. The order can be numeric or symbolic ('first' and 'last')",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "symbol",
+                                                "defaultValue": "-",
+                                                "label": "Display Order",
+                                                "displayorder": 13
+                                            },
+                                            "sendinit": {
+                                                "attrOrProp": 2,
+                                                "digest": "Send initial value",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "bool",
+                                                "defaultValue": "true",
+                                                "label": "Send Init",
+                                                "displayorder": 4
+                                            },
+                                            "ctlin": {
+                                                "attrOrProp": 2,
+                                                "digest": "MIDI controller number to control this parameter.",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "number",
+                                                "defaultValue": "-1",
+                                                "label": "MIDI Controller Number.",
+                                                "displayorder": 16
+                                            },
+                                            "meta": {
+                                                "attrOrProp": 2,
+                                                "digest": "A JSON formatted string containing metadata for use by the exported code",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "symbol",
+                                                "defaultValue": "",
+                                                "label": "Metadata",
+                                                "displayorder": 17
+                                            },
+                                            "nopreset": {
+                                                "attrOrProp": 2,
+                                                "digest": "Do not add this value to the preset [DEPRECATED - USE @preset 0 instead].",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 1,
+                                                "touched": 0,
+                                                "type": "bool",
+                                                "defaultValue": "false"
+                                            },
+                                            "preset": {
+                                                "attrOrProp": 2,
+                                                "digest": "Add this value to the preset.",
+                                                "isalias": 0,
+                                                "aliases": [],
+                                                "settable": 1,
+                                                "attachable": 0,
+                                                "isparam": 0,
+                                                "deprecated": 0,
+                                                "touched": 0,
+                                                "type": "bool",
+                                                "defaultValue": "true",
+                                                "label": "Include In Preset",
+                                                "displayorder": 11
+                                            }
+                                        },
+                                        "inputs": [
+                                            {
+                                                "name": "value",
+                                                "type": "number",
+                                                "digest": "Parameter value",
+                                                "defaultarg": 2,
+                                                "hot": 1,
+                                                "docked": 0
+                                            },
+                                            {
+                                                "name": "normalizedvalue",
+                                                "type": "number",
+                                                "digest": "Set value normalized. ",
+                                                "docked": 0
+                                            }
+                                        ],
+                                        "outputs": [
+                                            {
+                                                "name": "value",
+                                                "type": "number",
+                                                "digest": "Parameter value",
+                                                "defaultarg": 2,
+                                                "hot": 1,
+                                                "docked": 0
+                                            },
+                                            {
+                                                "name": "normalized",
+                                                "type": "number",
+                                                "digest": "Normalized parameter value.",
+                                                "docked": 0
+                                            }
+                                        ],
+                                        "helpname": "param",
+                                        "aliasOf": "param",
+                                        "classname": "param",
+                                        "operator": 0,
+                                        "versionId": -1661410411,
+                                        "changesPatcherIO": 0
+                                    },
+                                    "text": "param brightness @min 0. @max 100.",
+                                    "varname": "brightness"
+                                }
+                            },
                             {
                                 "box": {
                                     "id": "obj-7",
@@ -77,7 +954,7 @@
                                         "meta": "",
                                         "comment": ""
                                     },
-                                    "rnbo_serial": 3,
+                                    "rnbo_serial": 1,
                                     "rnbo_uniqueid": "out~_obj-7",
                                     "rnboinfo": {
                                         "needsInstanceInfo": 1,
@@ -170,7 +1047,7 @@
                                         "meta": "",
                                         "comment": ""
                                     },
-                                    "rnbo_serial": 1,
+                                    "rnbo_serial": 2,
                                     "rnbo_uniqueid": "out~_obj-6",
                                     "rnboinfo": {
                                         "needsInstanceInfo": 1,
@@ -264,7 +1141,7 @@
                                         "meta": "",
                                         "comment": ""
                                     },
-                                    "rnbo_serial": 3,
+                                    "rnbo_serial": 1,
                                     "rnbo_uniqueid": "in~_obj-4",
                                     "rnboinfo": {
                                         "needsInstanceInfo": 1,
@@ -357,7 +1234,7 @@
                                         "meta": "",
                                         "comment": ""
                                     },
-                                    "rnbo_serial": 1,
+                                    "rnbo_serial": 2,
                                     "rnbo_uniqueid": "in~_obj-3",
                                     "rnboinfo": {
                                         "needsInstanceInfo": 1,
@@ -461,7 +1338,7 @@
                                         "tonormalized": "",
                                         "unit": ""
                                     },
-                                    "rnbo_serial": 3,
+                                    "rnbo_serial": 2,
                                     "rnbo_uniqueid": "mix",
                                     "rnboinfo": {
                                         "needsInstanceInfo": 1,
@@ -879,7 +1756,7 @@
                                         "tonormalized": "",
                                         "unit": ""
                                     },
-                                    "rnbo_serial": 2,
+                                    "rnbo_serial": 3,
                                     "rnbo_uniqueid": "feedback",
                                     "rnboinfo": {
                                         "needsInstanceInfo": 1,
@@ -1297,7 +2174,7 @@
                                         "tonormalized": "",
                                         "unit": ""
                                     },
-                                    "rnbo_serial": 1,
+                                    "rnbo_serial": 4,
                                     "rnbo_uniqueid": "diffusion",
                                     "rnboinfo": {
                                         "needsInstanceInfo": 1,
@@ -1704,8 +2581,294 @@
                                                 "modernui": 1
                                             },
                                             "classnamespace": "dsp.gen",
-                                            "rect": [ 34.0, 209.0, 1660.0, 822.0 ],
+                                            "rect": [ 34.0, 208.0, 1660.0, 822.0 ],
                                             "boxes": [
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "mstosamps",
+                                                        "patching_rect": [ 570.5, 1117.0, 70.0, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-143",
+                                                        "numinlets": 1,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "20",
+                                                        "patching_rect": [ 570.5, 1096.0, 22.0, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-144",
+                                                        "numinlets": 0,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "slide",
+                                                        "patching_rect": [ 532.5, 1166.0, 40.0, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-145",
+                                                        "numinlets": 3,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "in 7",
+                                                        "patching_rect": [ 532.5, 1128.0, 28.0, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-146",
+                                                        "numinlets": 0,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "mstosamps",
+                                                        "patching_rect": [ 368.0, 205.0, 70.0, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-142",
+                                                        "numinlets": 1,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "20",
+                                                        "patching_rect": [ 368.0, 184.0, 22.0, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-141",
+                                                        "numinlets": 0,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "slide",
+                                                        "patching_rect": [ 330.0, 254.0, 40.0, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-140",
+                                                        "numinlets": 3,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "*",
+                                                        "patching_rect": [ 870.5, 1308.5, 29.5, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-130",
+                                                        "numinlets": 2,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "*",
+                                                        "patching_rect": [ 780.5, 1308.5, 29.5, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-131",
+                                                        "numinlets": 2,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "*",
+                                                        "patching_rect": [ 694.5, 1308.5, 29.5, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-132",
+                                                        "numinlets": 2,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "*",
+                                                        "patching_rect": [ 597.5, 1308.5, 29.5, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-133",
+                                                        "numinlets": 2,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "* 0.02",
+                                                        "patching_rect": [ 532.5, 1202.5, 40.0, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-134",
+                                                        "numinlets": 1,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "353",
+                                                        "patching_rect": [ 871.5, 1267.5, 29.0, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-136",
+                                                        "numinlets": 0,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "431",
+                                                        "patching_rect": [ 779.5, 1267.5, 29.0, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-137",
+                                                        "numinlets": 0,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "327",
+                                                        "patching_rect": [ 695.5, 1267.5, 29.0, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-138",
+                                                        "numinlets": 0,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "111",
+                                                        "patching_rect": [ 597.5, 1267.5, 27.0, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-139",
+                                                        "numinlets": 0,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "*",
+                                                        "patching_rect": [ 668.0, 391.0, 29.5, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-129",
+                                                        "numinlets": 2,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "*",
+                                                        "patching_rect": [ 580.0, 391.0, 29.5, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-124",
+                                                        "numinlets": 2,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "*",
+                                                        "patching_rect": [ 492.0, 391.0, 29.5, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-123",
+                                                        "numinlets": 2,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "*",
+                                                        "patching_rect": [ 395.0, 391.0, 29.5, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-122",
+                                                        "numinlets": 2,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "* 0.02",
+                                                        "patching_rect": [ 330.0, 285.5, 40.0, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-121",
+                                                        "numinlets": 1,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "in 7",
+                                                        "patching_rect": [ 330.0, 216.0, 28.0, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-33",
+                                                        "numinlets": 0,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "in 6",
+                                                        "patching_rect": [ 1072.0, -45.0, 28.0, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-82",
+                                                        "numinlets": 0,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "* 0.01",
+                                                        "patching_rect": [ 1059.0, -9.0, 40.0, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-73",
+                                                        "numinlets": 1,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "mix",
+                                                        "patching_rect": [ 944.0, 35.0, 40.0, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-10",
+                                                        "numinlets": 3,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
+                                                {
+                                                    "box": {
+                                                        "maxclass": "newobj",
+                                                        "text": "history",
+                                                        "patching_rect": [ 1019.0, 35.0, 44.0, 22.0 ],
+                                                        "outlettype": [ "" ],
+                                                        "id": "obj-5",
+                                                        "numinlets": 1,
+                                                        "numoutlets": 1
+                                                    }
+                                                },
                                                 {
                                                     "box": {
                                                         "maxclass": "newobj",
@@ -1765,7 +2928,7 @@
                                                     "box": {
                                                         "maxclass": "newobj",
                                                         "text": "* 0.5",
-                                                        "patching_rect": [ 1059.0, 52.0, 33.0, 22.0 ],
+                                                        "patching_rect": [ 944.0, -7.0, 33.0, 22.0 ],
                                                         "outlettype": [ "" ],
                                                         "id": "obj-114",
                                                         "numinlets": 1,
@@ -1776,7 +2939,7 @@
                                                     "box": {
                                                         "maxclass": "newobj",
                                                         "text": "in 2",
-                                                        "patching_rect": [ 1059.0, 13.0, 28.0, 22.0 ],
+                                                        "patching_rect": [ 944.0, -46.0, 28.0, 22.0 ],
                                                         "outlettype": [ "" ],
                                                         "id": "obj-1",
                                                         "numinlets": 0,
@@ -1830,8 +2993,8 @@
                                                 {
                                                     "box": {
                                                         "maxclass": "newobj",
-                                                        "text": "* 0.01",
-                                                        "patching_rect": [ 766.0, 462.0, 40.0, 22.0 ],
+                                                        "text": "* 0.008",
+                                                        "patching_rect": [ 766.0, 462.0, 47.0, 22.0 ],
                                                         "outlettype": [ "" ],
                                                         "id": "obj-109",
                                                         "numinlets": 1,
@@ -1852,8 +3015,8 @@
                                                 {
                                                     "box": {
                                                         "maxclass": "newobj",
-                                                        "text": "* 0.01",
-                                                        "patching_rect": [ 1296.0, 1297.0, 40.0, 22.0 ],
+                                                        "text": "* 0.008",
+                                                        "patching_rect": [ 1296.0, 1297.0, 47.0, 22.0 ],
                                                         "outlettype": [ "" ],
                                                         "id": "obj-107",
                                                         "numinlets": 1,
@@ -1896,7 +3059,7 @@
                                                 {
                                                     "box": {
                                                         "maxclass": "newobj",
-                                                        "text": "0.9",
+                                                        "text": "0.8",
                                                         "patching_rect": [ 1308.0, 1373.0, 25.0, 22.0 ],
                                                         "outlettype": [ "" ],
                                                         "id": "obj-68",
@@ -1962,33 +3125,11 @@
                                                 {
                                                     "box": {
                                                         "maxclass": "newobj",
-                                                        "text": "253",
-                                                        "patching_rect": [ 870.5, 1317.5, 29.0, 22.0 ],
-                                                        "outlettype": [ "" ],
-                                                        "id": "obj-75",
-                                                        "numinlets": 0,
-                                                        "numoutlets": 1
-                                                    }
-                                                },
-                                                {
-                                                    "box": {
-                                                        "maxclass": "newobj",
                                                         "text": "mstosamps",
                                                         "patching_rect": [ 870.5, 1352.5, 70.0, 22.0 ],
                                                         "outlettype": [ "" ],
                                                         "id": "obj-76",
                                                         "numinlets": 1,
-                                                        "numoutlets": 1
-                                                    }
-                                                },
-                                                {
-                                                    "box": {
-                                                        "maxclass": "newobj",
-                                                        "text": "431",
-                                                        "patching_rect": [ 780.5, 1317.5, 29.0, 22.0 ],
-                                                        "outlettype": [ "" ],
-                                                        "id": "obj-77",
-                                                        "numinlets": 0,
                                                         "numoutlets": 1
                                                     }
                                                 },
@@ -2011,28 +3152,6 @@
                                                         "outlettype": [ "" ],
                                                         "id": "obj-79",
                                                         "numinlets": 1,
-                                                        "numoutlets": 1
-                                                    }
-                                                },
-                                                {
-                                                    "box": {
-                                                        "maxclass": "newobj",
-                                                        "text": "327",
-                                                        "patching_rect": [ 694.5, 1317.5, 29.0, 22.0 ],
-                                                        "outlettype": [ "" ],
-                                                        "id": "obj-80",
-                                                        "numinlets": 0,
-                                                        "numoutlets": 1
-                                                    }
-                                                },
-                                                {
-                                                    "box": {
-                                                        "maxclass": "newobj",
-                                                        "text": "111",
-                                                        "patching_rect": [ 597.0, 1317.5, 27.0, 22.0 ],
-                                                        "outlettype": [ "" ],
-                                                        "id": "obj-81",
-                                                        "numinlets": 0,
                                                         "numoutlets": 1
                                                     }
                                                 },
@@ -2239,7 +3358,7 @@
                                                 {
                                                     "box": {
                                                         "maxclass": "newobj",
-                                                        "text": "0.9",
+                                                        "text": "0.8",
                                                         "patching_rect": [ 913.0, 492.0, 25.0, 22.0 ],
                                                         "outlettype": [ "" ],
                                                         "id": "obj-57",
@@ -2306,7 +3425,7 @@
                                                     "box": {
                                                         "maxclass": "newobj",
                                                         "text": "231",
-                                                        "patching_rect": [ 669.5, 410.5, 29.0, 22.0 ],
+                                                        "patching_rect": [ 669.5, 350.0, 29.0, 22.0 ],
                                                         "outlettype": [ "" ],
                                                         "id": "obj-2",
                                                         "numinlets": 0,
@@ -2328,7 +3447,7 @@
                                                     "box": {
                                                         "maxclass": "newobj",
                                                         "text": "447",
-                                                        "patching_rect": [ 579.5, 410.5, 29.0, 22.0 ],
+                                                        "patching_rect": [ 579.5, 350.0, 29.0, 22.0 ],
                                                         "outlettype": [ "" ],
                                                         "id": "obj-28",
                                                         "numinlets": 0,
@@ -2361,7 +3480,7 @@
                                                     "box": {
                                                         "maxclass": "newobj",
                                                         "text": "333",
-                                                        "patching_rect": [ 493.5, 410.5, 29.0, 22.0 ],
+                                                        "patching_rect": [ 493.5, 350.0, 29.0, 22.0 ],
                                                         "outlettype": [ "" ],
                                                         "id": "obj-3",
                                                         "numinlets": 0,
@@ -2372,7 +3491,7 @@
                                                     "box": {
                                                         "maxclass": "newobj",
                                                         "text": "127",
-                                                        "patching_rect": [ 396.0, 410.5, 29.0, 22.0 ],
+                                                        "patching_rect": [ 395.5, 350.0, 29.0, 22.0 ],
                                                         "outlettype": [ "" ],
                                                         "id": "obj-4",
                                                         "numinlets": 0,
@@ -2604,7 +3723,7 @@
                                                 {
                                                     "box": {
                                                         "maxclass": "newobj",
-                                                        "text": "0.5",
+                                                        "text": "0.6",
                                                         "patching_rect": [ 1353.0, 949.0, 25.0, 22.0 ],
                                                         "outlettype": [ "" ],
                                                         "id": "obj-126",
@@ -4465,7 +5584,7 @@
                                                     "box": {
                                                         "maxclass": "newobj",
                                                         "text": "in 1",
-                                                        "patching_rect": [ 1011.0, 13.0, 30.0, 22.0 ],
+                                                        "patching_rect": [ 896.0, -46.0, 30.0, 22.0 ],
                                                         "outlettype": [ "" ],
                                                         "id": "obj-48",
                                                         "numinlets": 0,
@@ -4474,6 +5593,230 @@
                                                 }
                                             ],
                                             "lines": [
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-145", 0 ],
+                                                        "destination": [ "obj-134", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-144", 0 ],
+                                                        "destination": [ "obj-143", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-143", 0 ],
+                                                        "destination": [ "obj-145", 1 ],
+                                                        "order": 1
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-143", 0 ],
+                                                        "destination": [ "obj-145", 2 ],
+                                                        "order": 0
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-146", 0 ],
+                                                        "destination": [ "obj-145", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-140", 0 ],
+                                                        "destination": [ "obj-121", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-33", 0 ],
+                                                        "destination": [ "obj-140", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-142", 0 ],
+                                                        "destination": [ "obj-140", 2 ],
+                                                        "order": 0
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-142", 0 ],
+                                                        "destination": [ "obj-140", 1 ],
+                                                        "order": 1
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-141", 0 ],
+                                                        "destination": [ "obj-142", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-130", 0 ],
+                                                        "destination": [ "obj-76", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-131", 0 ],
+                                                        "destination": [ "obj-78", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-133", 0 ],
+                                                        "destination": [ "obj-84", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-132", 0 ],
+                                                        "destination": [ "obj-79", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-136", 0 ],
+                                                        "destination": [ "obj-130", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-137", 0 ],
+                                                        "destination": [ "obj-131", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-138", 0 ],
+                                                        "destination": [ "obj-132", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-139", 0 ],
+                                                        "destination": [ "obj-133", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-134", 0 ],
+                                                        "destination": [ "obj-133", 1 ],
+                                                        "midpoints": [ 542.0, 1300.5234375, 617.5, 1300.5234375 ],
+                                                        "order": 3
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-134", 0 ],
+                                                        "destination": [ "obj-132", 1 ],
+                                                        "midpoints": [ 542.0, 1253.5, 679.0, 1253.5, 679.0, 1298.76953125, 714.5, 1298.76953125 ],
+                                                        "order": 2
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-134", 0 ],
+                                                        "destination": [ "obj-131", 1 ],
+                                                        "midpoints": [ 542.0, 1253.5, 766.0, 1253.5, 766.0, 1297.93359375, 800.5, 1297.93359375 ],
+                                                        "order": 1
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-134", 0 ],
+                                                        "destination": [ "obj-130", 1 ],
+                                                        "midpoints": [ 542.0, 1253.5, 856.0, 1253.5, 856.0, 1297.4375, 890.5, 1297.4375 ],
+                                                        "order": 0
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-121", 0 ],
+                                                        "destination": [ "obj-129", 1 ],
+                                                        "midpoints": [ 339.5, 336.0, 654.0, 336.0, 654.0, 387.0, 688.0, 387.0 ],
+                                                        "order": 0
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-121", 0 ],
+                                                        "destination": [ "obj-124", 1 ],
+                                                        "midpoints": [ 339.5, 336.0, 564.0, 336.0, 564.0, 387.0, 600.0, 387.0 ],
+                                                        "order": 1
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-121", 0 ],
+                                                        "destination": [ "obj-123", 1 ],
+                                                        "midpoints": [ 339.5, 336.0, 477.0, 336.0, 477.0, 387.0, 512.0, 387.0 ],
+                                                        "order": 2
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-121", 0 ],
+                                                        "destination": [ "obj-122", 1 ],
+                                                        "midpoints": [ 339.5, 387.0, 415.0, 387.0 ],
+                                                        "order": 3
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-129", 0 ],
+                                                        "destination": [ "obj-30", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-2", 0 ],
+                                                        "destination": [ "obj-129", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-124", 0 ],
+                                                        "destination": [ "obj-27", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-28", 0 ],
+                                                        "destination": [ "obj-124", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-123", 0 ],
+                                                        "destination": [ "obj-26", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-3", 0 ],
+                                                        "destination": [ "obj-123", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-122", 0 ],
+                                                        "destination": [ "obj-11", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-4", 0 ],
+                                                        "destination": [ "obj-122", 0 ]
+                                                    }
+                                                },
                                                 {
                                                     "patchline": {
                                                         "source": [ "obj-119", 0 ],
@@ -4488,26 +5831,8 @@
                                                 },
                                                 {
                                                     "patchline": {
-                                                        "source": [ "obj-117", 0 ],
-                                                        "destination": [ "obj-107", 0 ]
-                                                    }
-                                                },
-                                                {
-                                                    "patchline": {
-                                                        "source": [ "obj-116", 0 ],
-                                                        "destination": [ "obj-109", 0 ]
-                                                    }
-                                                },
-                                                {
-                                                    "patchline": {
                                                         "source": [ "obj-115", 0 ],
                                                         "destination": [ "obj-110", 0 ]
-                                                    }
-                                                },
-                                                {
-                                                    "patchline": {
-                                                        "source": [ "obj-114", 0 ],
-                                                        "destination": [ "obj-46", 0 ]
                                                     }
                                                 },
                                                 {
@@ -4653,20 +5978,8 @@
                                                 },
                                                 {
                                                     "patchline": {
-                                                        "source": [ "obj-109", 0 ],
-                                                        "destination": [ "obj-6", 1 ]
-                                                    }
-                                                },
-                                                {
-                                                    "patchline": {
                                                         "source": [ "obj-108", 0 ],
                                                         "destination": [ "obj-32", 2 ]
-                                                    }
-                                                },
-                                                {
-                                                    "patchline": {
-                                                        "source": [ "obj-107", 0 ],
-                                                        "destination": [ "obj-83", 1 ]
                                                     }
                                                 },
                                                 {
@@ -4880,18 +6193,6 @@
                                                 },
                                                 {
                                                     "patchline": {
-                                                        "source": [ "obj-81", 0 ],
-                                                        "destination": [ "obj-84", 0 ]
-                                                    }
-                                                },
-                                                {
-                                                    "patchline": {
-                                                        "source": [ "obj-80", 0 ],
-                                                        "destination": [ "obj-79", 0 ]
-                                                    }
-                                                },
-                                                {
-                                                    "patchline": {
                                                         "source": [ "obj-8", 0 ],
                                                         "destination": [ "obj-47", 0 ],
                                                         "order": 0
@@ -4920,21 +6221,9 @@
                                                 },
                                                 {
                                                     "patchline": {
-                                                        "source": [ "obj-77", 0 ],
-                                                        "destination": [ "obj-78", 0 ]
-                                                    }
-                                                },
-                                                {
-                                                    "patchline": {
                                                         "source": [ "obj-76", 0 ],
                                                         "destination": [ "obj-85", 4 ],
                                                         "midpoints": [ 880.0, 1402.5, 626.5, 1402.5 ]
-                                                    }
-                                                },
-                                                {
-                                                    "patchline": {
-                                                        "source": [ "obj-75", 0 ],
-                                                        "destination": [ "obj-76", 0 ]
                                                     }
                                                 },
                                                 {
@@ -5035,12 +6324,6 @@
                                                 },
                                                 {
                                                     "patchline": {
-                                                        "source": [ "obj-68", 0 ],
-                                                        "destination": [ "obj-69", 2 ]
-                                                    }
-                                                },
-                                                {
-                                                    "patchline": {
                                                         "source": [ "obj-67", 0 ],
                                                         "destination": [ "obj-66", 0 ],
                                                         "order": 0
@@ -5137,12 +6420,6 @@
                                                     "patchline": {
                                                         "source": [ "obj-58", 0 ],
                                                         "destination": [ "obj-120", 0 ]
-                                                    }
-                                                },
-                                                {
-                                                    "patchline": {
-                                                        "source": [ "obj-57", 0 ],
-                                                        "destination": [ "obj-56", 2 ]
                                                     }
                                                 },
                                                 {
@@ -5265,12 +6542,6 @@
                                                 },
                                                 {
                                                     "patchline": {
-                                                        "source": [ "obj-4", 0 ],
-                                                        "destination": [ "obj-11", 0 ]
-                                                    }
-                                                },
-                                                {
-                                                    "patchline": {
                                                         "source": [ "obj-39", 0 ],
                                                         "destination": [ "obj-14", 0 ]
                                                     }
@@ -5337,12 +6608,6 @@
                                                 },
                                                 {
                                                     "patchline": {
-                                                        "source": [ "obj-3", 0 ],
-                                                        "destination": [ "obj-26", 0 ]
-                                                    }
-                                                },
-                                                {
-                                                    "patchline": {
                                                         "source": [ "obj-29", 0 ],
                                                         "destination": [ "obj-43", 0 ],
                                                         "order": 0
@@ -5353,12 +6618,6 @@
                                                         "source": [ "obj-29", 0 ],
                                                         "destination": [ "obj-25", 1 ],
                                                         "order": 1
-                                                    }
-                                                },
-                                                {
-                                                    "patchline": {
-                                                        "source": [ "obj-28", 0 ],
-                                                        "destination": [ "obj-27", 0 ]
                                                     }
                                                 },
                                                 {
@@ -5426,12 +6685,6 @@
                                                     "patchline": {
                                                         "source": [ "obj-20", 0 ],
                                                         "destination": [ "obj-64", 0 ]
-                                                    }
-                                                },
-                                                {
-                                                    "patchline": {
-                                                        "source": [ "obj-2", 0 ],
-                                                        "destination": [ "obj-30", 0 ]
                                                     }
                                                 },
                                                 {
@@ -5504,12 +6757,6 @@
                                                     "patchline": {
                                                         "source": [ "obj-127", 0 ],
                                                         "destination": [ "obj-120", 3 ]
-                                                    }
-                                                },
-                                                {
-                                                    "patchline": {
-                                                        "source": [ "obj-126", 0 ],
-                                                        "destination": [ "obj-120", 2 ]
                                                     }
                                                 },
                                                 {
@@ -5592,13 +6839,93 @@
                                                         "destination": [ "obj-101", 0 ],
                                                         "midpoints": [ 244.5, 1220.0, 301.5, 1220.0 ]
                                                     }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-126", 0 ],
+                                                        "destination": [ "obj-120", 2 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-109", 0 ],
+                                                        "destination": [ "obj-6", 1 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-116", 0 ],
+                                                        "destination": [ "obj-109", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-107", 0 ],
+                                                        "destination": [ "obj-83", 1 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-117", 0 ],
+                                                        "destination": [ "obj-107", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-68", 0 ],
+                                                        "destination": [ "obj-69", 2 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-57", 0 ],
+                                                        "destination": [ "obj-56", 2 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-10", 0 ],
+                                                        "destination": [ "obj-5", 0 ],
+                                                        "order": 1
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-114", 0 ],
+                                                        "destination": [ "obj-10", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-5", 0 ],
+                                                        "destination": [ "obj-10", 1 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-82", 0 ],
+                                                        "destination": [ "obj-73", 0 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-73", 0 ],
+                                                        "destination": [ "obj-10", 2 ]
+                                                    }
+                                                },
+                                                {
+                                                    "patchline": {
+                                                        "source": [ "obj-10", 0 ],
+                                                        "destination": [ "obj-46", 0 ],
+                                                        "order": 0
+                                                    }
                                                 }
                                             ]
                                         }
                                     },
                                     "id": "obj-2",
                                     "maxclass": "newobj",
-                                    "numinlets": 5,
+                                    "numinlets": 7,
                                     "numoutlets": 2,
                                     "outlettype": [ "signal", "signal" ],
                                     "patching_rect": [ 362.0, 245.0, 92.0, 23.0 ],
@@ -5725,6 +7052,14 @@
                                             {
                                                 "name": "in5",
                                                 "type": "auto"
+                                            },
+                                            {
+                                                "name": "in6",
+                                                "type": "auto"
+                                            },
+                                            {
+                                                "name": "in7",
+                                                "type": "auto"
                                             }
                                         ],
                                         "outputs": [
@@ -5749,6 +7084,12 @@
                             }
                         ],
                         "lines": [
+                            {
+                                "patchline": {
+                                    "destination": [ "obj-8", 0 ],
+                                    "source": [ "obj-1", 0 ]
+                                }
+                            },
                             {
                                 "patchline": {
                                     "destination": [ "obj-2", 2 ],
@@ -5790,23 +7131,54 @@
                                     "destination": [ "obj-2", 3 ],
                                     "source": [ "obj-5", 0 ]
                                 }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [ "obj-2", 5 ],
+                                    "source": [ "obj-8", 0 ]
+                                }
+                            },
+                            {
+                                "patchline": {
+                                    "destination": [ "obj-2", 6 ],
+                                    "source": [ "obj-9", 0 ]
+                                }
                             }
-                        ]
+                        ],
+                        "export_config": {
+                            "vst-au-export": {
+                                "vst-au-export-ins": {
+                                    "plugin_name": "Super Duper Massive",
+                                    "plugin_manufacturer_name": "Repairer of Reputations",
+                                    "plugin_manufacturer_code": "RoRP"
+                                }
+                            }
+                        }
                     },
                     "patching_rect": [ 496.0, 530.0, 75.0, 22.0 ],
                     "rnboattrcache": {
-                        "diffusion": {
-                            "label": "diffusion",
-                            "isEnum": 0,
-                            "parsestring": ""
-                        },
                         "feedback": {
                             "label": "feedback",
                             "isEnum": 0,
                             "parsestring": ""
                         },
+                        "brightness": {
+                            "label": "brightness",
+                            "isEnum": 0,
+                            "parsestring": ""
+                        },
                         "mix": {
                             "label": "mix",
+                            "isEnum": 0,
+                            "parsestring": ""
+                        },
+                        "diffusion": {
+                            "label": "diffusion",
+                            "isEnum": 0,
+                            "parsestring": ""
+                        },
+                        "warp": {
+                            "label": "warp",
                             "isEnum": 0,
                             "parsestring": ""
                         }
@@ -5836,14 +7208,20 @@
                         "subtype": "Undefined",
                         "embed": 1,
                         "snapshot": {
-                            "feedback": {
-                                "value": 0.0
+                            "warp": {
+                                "value": 26.0
                             },
-                            "mix": {
-                                "value": 0.0
+                            "brightness": {
+                                "value": 100.0
                             },
                             "diffusion": {
-                                "value": 0.0
+                                "value": 30.700000000000003
+                            },
+                            "feedback": {
+                                "value": 100.0
+                            },
+                            "mix": {
+                                "value": 100.0
                             },
                             "__presetid": "f5789c6f-1be1-11f1-9c6f-421d9c03195b"
                         },
@@ -5858,25 +7236,31 @@
                                     "origin": "f5789c6f-1be1-11f1-9c6f-421d9c03195b",
                                     "type": "rnbo",
                                     "subtype": "",
-                                    "embed": 0,
+                                    "embed": 1,
                                     "snapshot": {
-                                        "feedback": {
-                                            "value": 0.0
+                                        "warp": {
+                                            "value": 26.0
                                         },
-                                        "mix": {
-                                            "value": 0.0
+                                        "brightness": {
+                                            "value": 100.0
                                         },
                                         "diffusion": {
-                                            "value": 0.0
+                                            "value": 30.700000000000003
+                                        },
+                                        "feedback": {
+                                            "value": 100.0
+                                        },
+                                        "mix": {
+                                            "value": 100.0
                                         },
                                         "__presetid": "f5789c6f-1be1-11f1-9c6f-421d9c03195b"
                                     },
                                     "fileref": {
                                         "name": "untitled",
-                                        "filename": "untitled_20260309_1.maxsnap",
+                                        "filename": "untitled_20260309_2.maxsnap",
                                         "filepath": "~/Documents/Max 9/Snapshots",
                                         "filepos": -1,
-                                        "snapshotfileid": "6223def699375b85c1d04bff8b46d596"
+                                        "snapshotfileid": "e4f6c74b5d6f8c224b708153aff6ec74"
                                     }
                                 }
                             ]
@@ -5931,7 +7315,7 @@
                     "numoutlets": 1,
                     "outlettype": [ "" ],
                     "parameter_enable": 0,
-                    "patching_rect": [ 780.0, 486.0, 150.0, 22.0 ]
+                    "patching_rect": [ 783.0, 530.0, 150.0, 22.0 ]
                 }
             },
             {
@@ -5970,6 +7354,7 @@
                                 "filename": "sho0630.aif",
                                 "filekind": "audiofile",
                                 "id": "u128000890",
+                                "selection": [ 0.9288135593220339, 0.9288135593220339 ],
                                 "loop": 1,
                                 "content_state": {
                                     "slurtime": [ 0 ],
@@ -6202,6 +7587,12 @@
             {
                 "patchline": {
                     "destination": [ "obj-8", 0 ],
+                    "source": [ "obj-2", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-8", 0 ],
                     "source": [ "obj-3", 0 ]
                 }
             },
@@ -6215,6 +7606,12 @@
                 "patchline": {
                     "destination": [ "obj-13", 1 ],
                     "source": [ "obj-5", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-8", 0 ],
+                    "source": [ "obj-6", 0 ]
                 }
             },
             {
@@ -6233,6 +7630,12 @@
                 "patchline": {
                     "destination": [ "obj-5", 0 ],
                     "source": [ "obj-8", 1 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-8", 1 ],
+                    "source": [ "obj-9", 1 ]
                 }
             },
             {
