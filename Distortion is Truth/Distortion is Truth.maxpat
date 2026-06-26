@@ -4,7 +4,7 @@
         "appversion": {
             "major": 9,
             "minor": 1,
-            "revision": 1,
+            "revision": 4,
             "architecture": "x64",
             "modernui": 1
         },
@@ -221,8 +221,8 @@
                     "numinlets": 2,
                     "numoutlets": 1,
                     "outlettype": [ "signal" ],
-                    "patching_rect": [ 436.0, 273.0, 66.0, 22.0 ],
-                    "text": "cycle~ 100"
+                    "patching_rect": [ 436.0, 273.0, 53.0, 22.0 ],
+                    "text": "cycle~ 2"
                 }
             },
             {
@@ -237,7 +237,7 @@
                         "appversion": {
                             "major": 9,
                             "minor": 1,
-                            "revision": 1,
+                            "revision": 4,
                             "architecture": "x64",
                             "modernui": 1
                         },
@@ -475,7 +475,7 @@
                                     "maxclass": "newobj",
                                     "numinlets": 1,
                                     "numoutlets": 0,
-                                    "patching_rect": [ 47.916666746139526, 432.2916501760483, 35.0, 22.0 ],
+                                    "patching_rect": [ 50.0, 432.2916501760483, 35.0, 22.0 ],
                                     "text": "out 1"
                                 }
                             }
